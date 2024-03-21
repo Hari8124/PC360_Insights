@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/user_dashboard.css">
+    <title>PC360 Insights</title>
+    <link rel="icon" type="image/x-icon" href="../static/favicon32.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/favicon32.ico">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="../static/images/logo.png" alt="Logo" class="logo" draggable="false">
+            <div class="logo-text">
+                <p><strong>
+                    &nbsp;&nbsp;&nbsp; Integral Coach Factory, Chennai-
+                    <span class="large-number">600038&nbsp;&nbsp;&nbsp</span><br>
+                    A Production unit under Ministry of Railways
+                </strong></p>
+            </div>
+        </div>
+    </header>
+    
+       
+    <div class="custom-heading">
+        <a href="/" class="home-button">
+            <span class="home-icon-container">
+                <img src="../static/images/home.png" alt="Home" class="home" draggable="false" width="32" height="32">
+            </span>
+        </a>
+        <h1>
+            <span>PC360 Insights</span>
+            <img src="../static/images/img.png" alt="Image" class="image" draggable="false" width="55" height="55">
+        </h1>
+    </div>   
+    
+    
+    <main class="folder-section">
+        <div class="dashboard">
+            <!-- Additional Sections -->
+            <section class="folder" id="system-info">
+                <h2>
+                    <a href="/system" title="">
+                        <img src="../static/images/sysinfo.png" alt="System Icon" class="icon" width="32" height="32" draggable="false">
+                        System Information
+                    </a>
+                </h2>
+                <div class="folder-content">
+                    <div class="folder-separator"></div>
+                    <div class="content">
+                        <p><strong>MAC Address:</strong> <span id="mac-info"></span></p>
+                    </div>
+                </div>
+            </section>
+         
+            <section class="folder" id="software-info">
+                <h2>
+                    <a href="/software">
+                        <img src="../static/images/software.png" alt="Software Icon" class="icon" width="32" height="32" draggable="false">
+                        Software Catalog
+                    </a>
+                </h2>
+                <div class="content">
+                    <div class="software-count">
+                        <p><strong>Total Installed Softwares:</strong> <span id="total-software-count"></span></p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="folder" id="bios-info">
+                <h2>
+                    <a href="/bios">
+                        <img src="../static/images/bios.png" alt="BIOS Icon" class="icon" width="32" height="32" draggable="false">
+                        BIOS Information
+                    </a>
+                </h2>
+                <div class="content">
+                    <p><strong>BIOS Serial Number:</strong> <span id="bios-serial"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="local-users-info">
+                <h2>
+                    <a href="/local">
+                        <img src="../static/images/usercred.png" alt="User Accounts Icon" class="icon" width="32" height="32" draggable="false">
+                        User Credentials
+                    </a>
+                </h2>
+                <div class="content">
+                    <p><strong>Total Local User Accounts:</strong> <span id="total-local-users"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="memory-slot-info">
+                <h2>
+                    <a href="/memory_slot">
+                        <img src="../static/images/memory_slot.png" alt="Memory Slot Icon" class="icon" width="32" height="32" draggable="false">
+                        Memory Slot Inventory
+                    </a>
+                </h2>
+                <div class="content">
+                    <p><strong>Total Memory Slots:</strong> <span id="total-memory-slots"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="multimedia-info">
+                <h2>
+                    <a href="/multimedia">
+                        <img src="../static/images/multimedia.png" alt="Multimedia Icon" class="icon" width="32" height="32" draggable="false">
+                        Multimedia Repository
+                    </a>
+                </h2>
+                <div class="content">
+                    <p><strong>Total Multimedia Devices:</strong> <span id="total-multimedia-devices"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="cd-rom-info">
+                <h2><a href="/cdrom"><img src="../static/images/cd_rom.png" alt="CD-ROM Icon" class="icon" width="32" height="32" draggable="false">CD ROM Registry</a></h2>
+                <div class="content">
+                    <p><strong>Total Number of CD ROMs:</strong> <span id="total-cdroms"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="printer-info">
+                <h2><a href="/printer"><img src="../static/images/printer.png" alt="Printer Icon" class="icon" width="32" height="32" draggable="false">Printer Configurations</a></h2>
+                <div class="content">
+                    <p><strong>Total Number of Printers:</strong> <span id="total-printers"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="shared-folder-info">
+                <h2><a href="/shared"><img src="../static/images/shared.png" alt="Shared Directories Icon" class="icon" width="32" height="32" draggable="false">Shared Directories</a></h2>
+                <div class="content">
+                    <p><strong>Total Number of Shared Folders:</strong> <span id="total-shared-folders"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="disk-info">
+                <h2><a href="/disk"><img src="../static/images/disk.png" alt="Disk Icon" class="icon" width="32" height="32" draggable="false">Disk Information</a></h2>    
+                <div class="content">
+                    <p><strong>Total Free Space Percentage:</strong> <span id="total-free-space-percentage"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="system-profile-info">
+                <h2><a href="/sysprofile"><img src="../static/images/profile.png" alt="Profile Icon" class="icon" width="32" height="32" draggable="false"> System Profile</a></h2>
+                <div class="content">
+                    <p><strong>Hostname:</strong> <span id="hostname"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="network-adapter-info">
+                <h2><a href="/network"><img src="../static/images/network.png" alt="Network Icon" class="icon" width="32" height="32" draggable="false">Network Information</a></h2>
+                <div class="content">
+                    <p><strong>IP Address:</strong> <span id="ip-address"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="startup-config-info">
+                <h2><a href="/startup"><img src="../static/images/startup.png" alt="Startup Icon" class="icon" width="32" height="32" draggable="false">Startup Configuration</a></h2>
+                <div class="content">
+                    <p><strong>Total Number of Startup Applications:</strong> <span id="total-startup-apps"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="system-patch-history">
+                <h2><a href="/syshotfix"><img src="../static/images/patch.png" alt="Patch History Icon" class="icon" width="32" height="32" draggable="false"> System Patch History</a></h2>
+                <div class="content">
+                    <p><strong>Total Update History:</strong> <span id="total-update-history"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="partition-info">
+                <h2><a href="/partition"><img src="../static/images/partition.png" alt="Partition Icon" class="icon" width="32" height="32" draggable="false">Partition Information</a></h2>
+                <div class="content">
+                    <p><strong>Total Number of Partitions:</strong> <span id="total-partitions"></span></p>
+                </div>
+            </section>
+          
+            <section class="folder" id="update-info">
+                <h2><a href="/update"><img src="../static/images/update.png" alt="Update Icon" class="icon" width="32" height="32" draggable="false"> Update Information</a></h2>
+                <div class="content">
+                    <p><strong>Update Required:</strong> <span id="update-required"></span></p>
+                </div>
+            </section>
+            
+            <section class="folder" id="system-profile-history">
+                <h2><a href="/sysprofilearch"><img src="../static/images/profilearch.png" alt="Profile History Icon" class="icon" width="32" height="32" draggable="false"> System Profile Archive</a></h2>
+                <div class="content">
+                    <p><strong>Total Histories:</strong> <span id="histories"></span></p>
+                </div>
+            </section>
+
+            <section class="folder" id="antivirus-status">
+                <h2><a href="/antivirus"><img src="../static/images/antivirus.png" alt="Antivirus Icon" class="icon" width="32" height="32" draggable="false"> Antivirus Status</a></h2>
+                <div class="content">
+                    <p><strong>Antivirus Installed:</strong> <span id="antivirus-installed"></span></p>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p class="footer-text"><strong>© Developed by IT Centre<strong></p>
+    </footer>
+
+    <script src="../static/user_dashboard.js"></script>
+</body>
+</html>

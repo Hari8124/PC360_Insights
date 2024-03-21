@@ -1,0 +1,366 @@
+/* Header styles */
+.header {
+    position: sticky; /* Change from fixed to sticky */
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 0; /* Adjust the padding as needed */
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    z-index: 1;
+    height: 80px;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif; /* Use the same font as the body */
+    font-weight: 600; /* Adjust font weight as needed */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.logo-text p {
+    font-family: "Georgia", serif;
+    font-size: 24px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.logo-text .large-number {
+    font-family: "Times New Roman", serif;
+    font-size: 23px;
+}
+
+.custom-heading {
+    text-align: center;
+    background-color: #F3F6FC;
+    color: #000000;
+    font-family: 'San Francisco', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative; /* Add this to create a stacking context */
+}
+
+.custom-heading h1 {
+    display: flex;
+    align-items: center;
+}
+
+.custom-heading span {
+    margin-right: 0px; /* Adjust this margin as needed to separate text and image */
+}
+
+.custom-heading h1 span {
+    position: relative;
+}
+
+.custom-heading h1 span::after {
+    content: "Welcome to PC360 Insights";
+    display: block;
+    position: absolute;
+    bottom: -25px; /* Adjust the distance from the text as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #616161;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    transition-delay: 0.15s;
+}
+
+.custom-heading h1 span:hover::after {
+    opacity: 1;
+}
+
+.custom-heading, .header {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.image {
+    width: 55px;
+    height: 55px;
+    animation: rotate 5s linear infinite;
+}
+
+/* Home Icon */
+.home-icon {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+    z-index: 1; /* Increase the z-index to make it higher than ::before */
+}
+
+/* Modify the CSS for the anchor element */
+.home-button {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    text-decoration: none;
+    z-index: 1; /* Ensure the anchor is behind the home icon */
+}
+
+/* Lower the z-index for ::before to make it go behind the icon */
+.home-icon-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(97, 97, 97, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: -1; /* Lower the z-index further */
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Hover effect for the menu button */
+.home-icon-container:hover::before {
+    opacity: 1;
+}
+
+/* Text Label on Hover */
+.home-icon-container::after {
+    content: "Home";
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #616161;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.home-icon-container:hover::after {
+    opacity: 1;
+}
+
+
+
+/* Reset some default browser styles */
+body,
+h1,
+h2,
+p,
+table {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-smooth: always; /* Enable font smoothing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    background-color: #F3F6FC;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    /* Decrease line height */
+    line-height: 1; /* You can adjust this value as needed */
+    text-rendering: optimizeLegibility;
+}
+
+/* Overlay a transparent div */
+.protect-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+}
+
+/* Folder section styles */
+.folder-section {
+    flex-grow: 1;
+    padding: 0 20px; /* Adjust the padding for spacing below the header */
+    margin-top: 15px; /* Ensure spacing below the header */
+    margin-bottom: 15px;
+}
+
+/* Dashboard styles */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted minmax value */
+    gap: 20px; /* Adjust spacing between folders */
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+    justify-content: center; /* Center columns horizontally */
+}
+
+/* Folder styles */
+.folder {
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    min-width: 200px;
+    max-width: 300px;
+    height: auto;
+    min-height: 80px;  /*Increase the folder's minimum height */
+    border-radius: 10px; /* Add border-radius for curved edges */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    position: relative; /* Add this to make the content box stretch to the edges */
+}
+
+/* Move only the folder names up */
+.folder h2 {
+    font-size: 18px; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent folder names from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis (...) for long folder names */
+    height: 100%; /* Ensure the name takes full height */
+    text-align: left; /* Adjust the text alignment as needed (e.g., left, center, right) */
+    padding-left: 20px; /* Padding to the left to control horizontal position */
+}
+
+/* Move only the images down */
+.folder h2 img.icon {
+    margin-right: 10px;
+    transform: translateY(30%); /* Adjust the vertical position */
+}
+
+
+/* Add this rule to style links within the folder sections */
+.folder a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s, background-color 0.3s; /* Add a smooth transition effect */
+}
+
+/* Style the content box inside the folder */
+.folder .content {
+    font-size: 14px;
+    text-align: center;
+    background-color: #f2f2f2; /* Add background color */
+    padding: 10px; /* Add padding to the content box */
+    border-radius: 0 0 10px 10px; /* Add border-radius to round the bottom corners */
+    position: absolute;
+    bottom: 0; /* Align content box to the bottom */
+    left: 0; /* Align content box to the left */
+    right: 0; /* Align content box to the right */
+}
+
+/* Folder hover effect */
+.folder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .folder-section {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .footer-text {
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+}
+
+/* Add smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #FFFFFF; /* Change to the desired light color (#F3F6FC) */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: #80868B; /* Change to the desired white color (#FFFFFF) */
+    border-radius: 6px; /* Adjust the border-radius to control the curvature */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #80868B; /* Change to the desired white color (#FFFFFF) on hover */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: right;
+    padding: 5px 20px;
+    flex-shrink: 0;
+    margin-top: auto;
+    font-family: 'Montserrat', sans-serif; /* Use the same font as the body */
+    font-weight: 600; /* Adjust font weight as needed */
+    line-height: 1;
+}
