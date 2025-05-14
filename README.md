@@ -43,9 +43,9 @@ print(data["computer_id"], data["total_installed_applications"])
 
 Here are some screenshots of PC360 Insights in action:
 
-![Image 1](https://drive.google.com/file/d/1Nx1OysyqPuoJDAKKrLdaP_XZOVqb9TJD/view?usp=drive_link)
-![Image 2](https://drive.google.com/file/d/1ZCQ62qPC-ce25lss_MWeWCs_J51WGxdT/view?usp=drive_link)
-![Image 3](https://drive.google.com/file/d/1deMf5O5FHdqGJo2eHNNID9-rovbTcML9/view?usp=drive_link)
+![Image 1](https://drive.google.com/uc?export=view&id=1Nx1OysyqPuoJDAKKrLdaP_XZOVqb9TJD)  
+![Image 2](https://drive.google.com/uc?export=view&id=1ZCQ62qPC-ce25lss_MWeWCs_J51WGxdT)  
+![Image 3](https://drive.google.com/uc?export=view&id=1deMf5O5FHdqGJo2eHNNID9-rovbTcML9)  
 
 ## Why It Stands Out
 - Parallelized registry parsing for faster app discovery
